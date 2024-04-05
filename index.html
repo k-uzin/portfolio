@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main.scss">
     <link rel="icon" href="img/notebook.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -24,16 +24,26 @@
                 <a href="#">&lt;YUJIN /&gt;</a>
             </h1><!-- .logo end -->
 
-            <nav class="nav">
+            <nav class="pc_nav">
                 <ul>
-                    <!-- <li><a href="#">Intro</a></li> -->
-                    <li><a class="on" href="#intro">Intro</a></li>
+                    <li><a href="#intro">Intro</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Project</a></li>
                     <li><a href="#design">Design</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav><!-- .nav end -->
+            </nav><!-- .pc_nav end -->
+
+            <nav class="mobile_nav">
+                <button>menu</button>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav><!-- .mobile_nav end -->
         </header><!-- .header end -->
 
         <main class="container">
@@ -89,10 +99,96 @@
                         <span>o</span>
                     </div>
                 </div><!-- intro_title end -->
-                <div class="intro_scroll"></div>
+                <div class="intro_scroll">
+                    <a href="#about"></a>
+                </div>
+                <div class="mobile_qr">
+                    <a href="img/모바일큐알.png" data-fancybox="img">
+                        <img src="img/모바일큐알.png" alt="모바일큐알">
+                    </a>
+                    <span>mobile QR</span>
+                </div><!-- .mobile_qr end -->
             </section><!-- .intro end -->
 
             <section id="about" class="about">
+                <div class="left_box">
+                    <figure class="image_area">
+                        <img src="img/증명사진.jpeg" alt="프로필이미지">
+                    </figure>
+                    <ul class="text_area">
+                        <h3>ABOUT</h3>
+                        <li>
+                            <span class="text_medium">NAME</span>
+                            <span class="text_regular">김유진</span>
+                        </li>
+                        <li>
+                            <span class="text_medium">BIRTH</span>
+                            <span class="text_regular">2001.06.19</span>
+                        </li>
+                        <li>
+                            <span class="text_medium">PHONE</span>
+                            <span class="text_regular">010-5506-0619</span>
+                        </li>
+                        <li>
+                            <span class="text_medium">E-MAIL</span>
+                            <span class="text_regular">kdbwls619@naver.com</span>
+                        </li>
+                    </ul><!-- .text_area end -->
+                </div><!-- .left_box end -->
+                <div class="right_box">
+                    <div class="certificate">
+                        <h3>CERTIFICATE</h3>
+                        <ul class="text_area">
+                            <li>
+                                <span class="text_medium">2023</span>
+                                <div class="text_regular">웹디자인기능사<br /><span class="text_small">2023.09 한국산업인력공단</span></div>
+                            </li>
+                            <li>
+                                <span class="text_medium">2017</span>
+                                <div class="text_regular">컴퓨터그래픽스운용기능사<br><span class="text_small">2017.10 한국산업인력공단</span></div>
+                            </li>
+                            <li>
+                                <span class="text_medium">2017</span>
+                                <div class="text_regular">GTQ 포토샵 1급<br /><span class="text_small">2017.08 한국생산성본부</span></div>
+                            </li>
+                        </ul>
+                    </div><!-- .certificate end -->
+                    <div class="education">
+                        <h3>EDUCATION</h3>
+                        <ul class="text_area">
+                            <li>
+                                <span class="text_medium">2023</span>
+                                <div class="text_regular">그린컴퓨터아카데미 UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정<br/><span class="text_small">수료 2023.11 ~ 2024.04</span></div>
+                                
+                            </li>
+                            <li>
+                                <span class="text_medium">2020</span>
+                                <div class="text_regular">경상국립대학교 식물의학과<br/><span class="text_small">중퇴 2020.03 ~ 2021.09</span></div>
+                                
+                            </li>
+                            <li>
+                                <span class="text_medium">2020</span>
+                                <div class="text_regular">경해여자고등학교<br /><span class="text_small">졸업 2017.03 ~ 2020.02</span></div>
+                                
+                            </li>
+                        </ul>
+                    </div><!-- .education end -->
+                    <div class="skill">
+                        <h3>SKILL</h3>
+                        <div class="icon_area">
+                            <img src="img/icon_html.png" alt="icon_html">
+                            <img src="img/icon_css_.png" alt="icon_css">
+                            <img src="img/icon_js.png" alt="icon_js">
+                            <img src="img/icon_sass.png" alt="icon_sass">
+                            <img src="img/icon_jquery.png" alt="icon_jquery">
+                            <img src="img/icon_react.png" alt="icon_react">
+                            <img src="img/icon_photoshop_.png" alt="icon_photoshop">
+                            <img src="img/icon_illustrator_.png" alt="icon_illustrator">
+                            <img src="img/icon_figma.png" alt="icon_figma">
+                            <img src="img/icon_github.png" alt="icon_github">
+                        </div><!-- .icon_area end -->
+                    </div><!-- .skill end -->
+                </div><!-- .right_box end -->
             </section><!-- .about end -->
 
             <section id="project" class="project">
@@ -106,26 +202,13 @@
                 <div class="project_list">
                     <ul>
                         <li class="project_item on" data-type="responsive">
-                            <a href="#" class="image_area">
+                            <a href="https://k-uzin.github.io/themoving/" target="_blank" class="image_area">
                                 <img src="img/themoving.png" alt="더무빙 리뉴얼">
-                                <!-- <div class="pc_mockup">
-                                    <img src="" alt="">
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                </div>
-                                <div class="mobile_mockup">
-                                    <img src="" alt="">
-                                    <figure>
-                                        <img src="" alt="">
-                                    </figure>
-                                </div> -->
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[반응형] THE MOVING</h3>
-                                <p class="item_desc">감성 글램핑 브랜드 더무빙을 리뉴얼 하였으며<!-- ,<br />  -->
-                                    디자인/퍼블리싱 100% 참여했습니다.</p>
+                                <h4 class="item_title">[반응형] THE MOVING</h4>
+                                <p class="item_desc">감성 글램핑 브랜드 더무빙을 리뉴얼 했으며 디자인/퍼블리싱 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#SCSS</span>
                                     <span>#jquery</span>
@@ -134,115 +217,147 @@
                                     <span>#Media Query</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
-                                    <a href="" target="_blank">process</a>
+                                    <a href="https://k-uzin.github.io/themoving/" target="_blank">GO WEB</a>
+                                    <a href="sub/process/더무빙 리뉴얼 프로세스.pdf" target="_blank">process</a>
                                     <a href="" target="_blank">figma</a>
                                 </div><!-- .btn end -->
                             </div><!-- .text_area end -->
                         </li><!-- .project_item end -->
 
                         <li class="project_item on" data-type="pc">
-                            <a href="#" class="image_area">
+                            <a href="https://k-uzin.github.io/yslbeauty/" target="_blank" class="image_area">
                                 <img src="img/yslbeauty.png" alt="입생로랑 뷰티 리뉴얼">
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[PC] YSL Beauty</h3>
-                                <p class="item_desc">뷰티 브랜드 입생로랑 뷰티를 리뉴얼 하였으며<!-- ,<br />  -->
-                                    디자인/퍼블리싱 100% 참여했습니다.</p>
+                                <h4 class="item_title">[PC] YSL Beauty</h4>
+                                <p class="item_desc">뷰티 브랜드 입생로랑 뷰티 리뉴얼했으며 디자인/퍼블리싱 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#Java Script</span>
                                     <span>#AOS</span>
                                     <span>#Swiper.js</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
-                                    <a href="" target="_blank">process</a>
-                                    <a href="" target="_blank">figma</a>
+                                    <a href="https://k-uzin.github.io/yslbeauty/" target="_blank">GO WEB</a>
+                                    <a href="sub/process/입생로랑_리뉴얼_프로세스.pdf" target="_blank">process</a>
+                                    <a href="https://www.figma.com/file/D7CYq0VrB7FkwEpIUNlksQ/%EC%9E%85%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8_%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84?type=design&node-id=0-1&mode=design&t=txmpzNDdkSMqR7bB-0" target="_blank">figma</a>
                                 </div><!-- .btn end -->
                             </div><!-- .text_area end -->
                         </li><!-- .project_item end -->
 
                         <li class="project_item on" data-type="responsive">
-                            <a href="#" class="image_area">
+                            <a href="https://k-uzin.github.io/f5nature/" target="_blank" class="image_area">
                                 <img src="img/f5nature.png" alt="f5nature 리뉴얼">
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[반응형] F5NATURE</h3>
-                                <p class="item_desc">캔들 브랜드 F5NATURE를 리뉴얼 하였으며<!-- ,<br />  -->
-                                    퍼블리싱 100% 참여했습니다.</p>
+                                <h4 class="item_title">[반응형] F5NATURE</h4>
+                                <p class="item_desc">캔들 브랜드 F5NATURE 리뉴얼했으며 퍼블리싱 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#jquery</span>
                                     <span>#Media Query</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
-                                    <a href="" target="_blank">process</a>
-                                    <a href="" target="_blank">figma</a>
+                                    <a href="https://k-uzin.github.io/-/" target="_blank">GO WEB</a>
+                                    <a href="https://www.figma.com/file/23ua1bMSSqzASm7YFQoWaa/%EB%B0%98%EC%9D%91%ED%98%95-%EC%88%98%EC%97%85%EC%9A%A9-(Copy)?type=design&node-id=45-5362&mode=design&t=txmpzNDdkSMqR7bB-0" target="_blank">figma</a>
                                 </div><!-- .btn end -->
                             </div><!-- .text_area end -->
                         </li><!-- .project_item end -->
 
                         <li class="project_item on" data-type="responsive">
-                            <a href="#" class="image_area">
+                            <a href="https://k-uzin.github.io/lighting/" target="_blank" class="image_area">
                                 <img src="img/light.png" alt="조명 사이트">
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[반응형] LIGHT</h3>
-                                <p class="item_desc">조명 브랜드를 컨셉으로 제작한 사이트이며<!-- ,<br />  -->
-                                    퍼블리싱 100% 참여했습니다.</p>
+                                <h4 class="item_title">[반응형] LIGHT</h4>
+                                <p class="item_desc">조명 브랜드를 컨셉으로 제작한 사이트이며 퍼블리싱 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#HTML</span>
                                     <span>#CSS</span>
                                     <span>#Media Query</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
+                                    <a href="https://k-uzin.github.io/lighting/" target="_blank">GO WEB</a>
                                     <a href="" target="_blank">process</a>
-                                    <a href="" target="_blank">figma</a>
+                                    <a href="https://www.figma.com/file/qkJ1Pnnqhxs1IiNm88nlSz/%5B%EC%BD%94%EB%94%A9%5D%EB%B0%98%EC%9D%91%ED%98%95%EC%BD%94%EB%94%A9_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-(Copy)?type=design&node-id=1-32&mode=design&t=NJI5MjPVv1sI4Kgd-0" target="_blank">figma</a>
                                 </div><!-- .btn end -->
                             </div><!-- .text_area end -->
                         </li><!-- .project_item end -->
 
                         <li class="project_item on" data-type="pc">
-                            <a href="#" class="image_area">
+                            <a href="https://k-uzin.github.io/starbucks/" target="_blank" class="image_area">
+                                <img src="img/starbucks.png" alt="스타벅스 반응형 클론 코딩">
+                            </a><!-- .image_area end -->
+
+                            <div class="text_area">
+                                <h4 class="item_title">[PC] STARBUCKS</h4>
+                                <p class="item_desc">스타벅스 홈페이지를 클론 코딩했으며 퍼블리싱 100% 참여했습니다.</p>
+                                <div class="skill">
+                                    <span>#Java Script</span>
+                                    <span>#GSAP</span>
+                                    <span>#Swiper.js</span>
+                                    <span>#클론코딩</span>
+                                </div><!-- .skill end -->
+                                <div class="link_box">
+                                    <a href="https://k-uzin.github.io/starbucks/" target="_blank">GO WEB</a>
+                                </div><!-- .btn end -->
+                            </div><!-- .text_area end -->
+                        </li><!-- .project_item end -->
+
+                        <li class="project_item on" data-type="pc">
+                            <a href="https://k-uzin.github.io/megastudy/" target="_blank" class="image_area">
                                 <img src="img/megabooks.png" alt="메가스터디 북스 클론 코딩">
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[PC] 메가스터디 BOOKS</h3>
-                                <p class="item_desc">메가스터디 북스를 클론 코딩했으며<!-- ,<br />  -->
-                                    퍼블리싱 100% 참여했습니다.</p>
+                                <h4 class="item_title">[PC] 메가스터디 BOOKS</h4>
+                                <p class="item_desc">메가스터디 북스 홈페이지를 클론 코딩했으며 퍼블리싱 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#HTML</span>
                                     <span>#CSS</span>
                                     <span>#클론코딩</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
-                                    <a href="" target="_blank">process</a>
-                                    <a href="" target="_blank">figma</a>
+                                    <a href="https://k-uzin.github.io/megastudy/" target="_blank">GO WEB</a>
                                 </div><!-- .btn end -->
                             </div><!-- .text_area end -->
                         </li><!-- .project_item end -->
 
                         <li class="project_item on" data-type="mobile">
-                            <a href="#" class="image_area">
+                            <a href="sub/process/퍼피독_리디자인_프로세스.pdf" target="_blank" class="image_area">
                                 <img src="img/puppydog.png" alt="퍼피독 리디자인">
                             </a><!-- .image_area end -->
 
                             <div class="text_area">
-                                <h3 class="item_title">[MOBILE] 퍼피독</h3>
-                                <p class="item_desc">반려동물 용품 브랜드 퍼피독 모바일 사이트를 리디자인했으며<!-- ,<br />  -->
-                                    디자인 100% 참여했습니다.</p>
+                                <h4 class="item_title">[MOBILE] 퍼피독</h4>
+                                <p class="item_desc">반려동물 용품 쇼핑몰 퍼피독 모바일 홈페이지를 리디자인했으며 기획/디자인 100% 참여했습니다.</p>
                                 <div class="skill">
                                     <span>#모바일</span>
                                     <span>#리디자인</span>
                                 </div><!-- .skill end -->
                                 <div class="link_box">
-                                    <a href="" target="_blank">GO WEB</a>
+                                    <a href="https://www.figma.com/file/Ns9yw0VLR4FWPSpvIOTEVp/Untitled?type=design&node-id=100-743&mode=design&t=txmpzNDdkSMqR7bB-0" target="_blank">figma</a>
+                                    <a href="sub/process/퍼피독_리디자인_프로세스.pdf" target="_blank">process</a>
+                                </div><!-- .btn end -->
+                            </div><!-- .text_area end -->
+                        </li><!-- .project_item end -->
+
+                        <li class="project_item on" data-type="mobile">
+                            <a href="https://k-uzin.github.io/busan/index.html" target="_blank" class="image_area">
+                                <img src="img/Group 160.png" alt="리액트 네이티브 날씨앱">
+                            </a><!-- .image_area end -->
+
+                            <div class="text_area">
+                                <h4 class="item_title">[MOBILE] 부산한바꾸</h4>
+                                <p class="item_desc">부산광역시 공공데이터 포털의 open API를 활용하여 제작한 부산 여행정보 소개 앱이며 디자인/퍼블리싱 100% 참여했습니다.</p>
+                                <div class="skill">
+                                    <span>#API</span>
+                                    <span>#React</span>
+                                    <span>#Java Script</span>
+                                </div><!-- .skill end -->
+                                <div class="link_box">
+                                    <a href="https://k-uzin.github.io/busan/index.html" target="_blank">GO WEB</a>
                                     <a href="" target="_blank">process</a>
                                     <a href="" target="_blank">figma</a>
                                 </div><!-- .btn end -->
@@ -255,7 +370,7 @@
             <section id="design" class="design">
                 <div class="text_wrap">
                     <h2 class="title">Design</h2>
-                    <p>Photoshop&Illustrator로 디자인한 작업물입니다.<br />
+                    <p>Adobe Photoshop&Illustrator로 디자인한 작업물입니다.<br />
                         <span>
                             (클릭시 이미지가 확대됩니다.)
                     </p>
@@ -265,45 +380,58 @@
                 <div class="design_pc">
                     <div class="work_wrap">
                         <div class="box box1">
-                            <a class="big" href="img/트리_전체.png" data-fancybox>
+                            <a class="big" href="img/트리_전체.png" data-fancybox="images">
                                 <figure>
                                     <img src="img/트리.png" alt="포토샵_배너">
                                 </figure>
+                                <span class="top-right">illustrator</span>
                             </a>
-                            <a class="half" href="img/banner.jfif" data-fancybox>
+                            <a class="half" href="img/banner.jfif" data-fancybox="images">
                                 <figure>
                                     <img src="img/banner.jfif" alt="포토샵_배너">
                                 </figure>
+                                <span class="top-right">photoshop</span>
+
                             </a>
                         </div><!-- .box1 end -->
                         <div class="box box2">
-                            <a class="half" href="img/나이키_전체.png" data-fancybox>
+                            <a class="half" href="img/나이키_전체.png" data-fancybox="images">
                                 <figure>
-                                    <img src="img/나이키.png" alt="일러스트_나이키">
+                                    <img src="img/나이키_전체.png" alt="일러스트_나이키">
                                 </figure>
+                                <span class="top-left">illustrator</span>
+
                             </a>
-                            <a class="big" href="img/예시.png" data-fancybox>
+                            <a class="big" href="img/예시.png" data-fancybox="images">
                                 <figure>
                                     <img src="img/예시.png" alt="포토샵_예시">
                                 </figure>
+                                <span class="bottom-left">photoshop</span>
+
                             </a>
-                            <a class="big" href="img/그라디언트_전체.png" data-fancybox>
+                            <a class="big" href="img/그라디언트_전체.png" data-fancybox="images">
 
                                 <figure>
                                     <img src="img/그라디언트.png" alt="일러스트_그라디언트">
                                 </figure>
+                                <span class="left-top">illustrator</span>
+
                             </a>
                         </div><!-- .box2 end -->
                         <div class="box box3">
-                            <a class="small" href="img/그랜드오픈.jpg" data-fancybox>
+                            <a class="small" href="img/그랜드오픈.jpg" data-fancybox="images">
                                 <figure>
                                     <img src="img/그랜드오픈.jpg" alt="포토샵_그랜드오픈">
                                 </figure>
+                                <span class="bottom-left">photoshop</span>
+
                             </a>
-                            <a class="small" href="img/부산시티투어_전체.png" data-fancybox>
+                            <a class="small" href="img/부산시티투어_전체.png" data-fancybox="images">
                                 <figure>
                                     <img src="img/부산시티투어.png" alt="포토샵_상세페이지">
                                 </figure>
+                                <span class="top-right">photoshop</span>
+
                             </a>
                         </div><!-- .box3 end -->
                     </div><!-- .work_wrap end -->
@@ -311,38 +439,39 @@
 
                 <div class="design_mobile">
                     <div class="work_wrap">
-                        <a class="big" href="img/트리_전체.png" data-fancybox>
+                        <a class="big" href="img/트리_전체.png" data-fancybox="images">
                             <figure>
                                 <img src="img/트리.png" alt="일러스트_트리">
                             </figure>
+                            
                         </a>
-                        <a class="half" href="img/나이키_전체.png" data-fancybox>
+                        <a class="half" href="img/banner.jfif"  data-fancybox="images">
                             <figure>
-                                <img src="img/나이키.png" alt="일러스트_나이키">
+                                <img src="img/banner.jfif" alt="일러스트_배너">
                             </figure>
                         </a>
-                        <a class="half" href="img/나이키_전체.png" data-fancybox>
+                        <a class="half" href="img/나이키_전체.png"  data-fancybox="images">
                             <figure>
-                                <img src="img/나이키.png" alt="일러스트_나이키">
+                                <img src="img/나이키_전체.png" alt="일러스트_나이키">
                             </figure>
                         </a>
-                        <a class="big" href="img/예시.png" data-fancybox>
+                        <a class="big" href="img/예시.png"  data-fancybox="images">
                             <figure>
                                 <img src="img/예시.png" alt="포토샵_예시">
                             </figure>
                         </a>
-                        <a class="big" href="img/그라디언트_전체.png" data-fancybox>
+                        <a class="big" href="img/그라디언트_전체.png"  data-fancybox="images">
     
                             <figure>
                                 <img src="img/그라디언트.png" alt="일러스트_그라디언트">
                             </figure>
                         </a>
-                        <a class="small" href="img/그랜드오픈.jpg" data-fancybox>
+                        <a class="small" href="img/그랜드오픈.jpg"  data-fancybox="images">
                             <figure>
                                 <img src="img/그랜드오픈.jpg" alt="포토샵_그랜드오픈">
                             </figure>
                         </a>
-                        <a class="small" href="img/부산시티투어_전체.png" data-fancybox>
+                        <a class="small" href="img/부산시티투어_전체.png"  data-fancybox="images">
                             <figure>
                                 <img src="img/부산시티투어.png" alt="포토샵_상세페이지">
                             </figure>
@@ -364,24 +493,24 @@
                         <p>Let's Work Together!</p>
                     </div><!-- .text_area end -->
                     <div class="link_area">
-                        <div class="email box">
-                            <a target="_balnk" href="mailto:kdbwls619@naver.com">
-                                <img src="img/email.png" alt="email">
+                        <div class="qr box">
+                            <a href="img/카톡.png" data-fancybox="qr">
+                                <img src="img/카카오톡.png" alt="카카오톡">
                             </a>
-                        </div><!-- .email end -->
+                        </div><!-- .velog end -->
                         <div class="phone box">
                             <a target="_balnk" href="tel:01055060619">
                                 <img src="img/phone.png" alt="phone">
                             </a>
                         </div><!-- .phone end -->
-                        <div class="velog box">
-                            <a target="_blank" href="#">
-                                <img src="img/velog.png" alt="velog">
+                        <div class="email box">
+                            <a target="_balnk" href="mailto:kdbwls619@naver.com">
+                                <img src="img/email.png" alt="email">
                             </a>
-                        </div><!-- .velog end -->
+                        </div><!-- .email end -->
                         <div class="github box">
                             <a target="_blank" href="https://github.com/k-uzin">
-                                <img src="img/github.png" alt="github">
+                                <img src="img/contact_github.png" alt="github">
                             </a>
                         </div><!-- .github end -->
                     </div><!-- .link_area end -->
@@ -390,7 +519,7 @@
         </main><!-- .container end -->
 
         <footer class="footer">
-            <span class="copyright">© 2023 Kim Yujin. All Rights Reserved.</span>
+            <span class="copyright">© 2024 Kim Yujin. All Rights Reserved.</span>
         </footer><!-- .footer end -->
 
         <div class="cursor">
