@@ -212,9 +212,7 @@ header {
         right: 0;
         left: 0;
         margin: 0 auto;
-        animation:
-            down 1.5s 5s infinite,
-            fadein 1s 5s;
+        animation: down 1.5s 5s infinite, fadein 1s 5s;
         animation-fill-mode: forwards;
         a {
             display: block;
@@ -251,12 +249,12 @@ header {
     }
     .mobile_qr {
         position: absolute;
-        bottom: 560px;
-        right: 130px;
+        top: 280px;
+        right: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        animation: opacity 1s 5s;
+        animation: opacity 1s 3.5s;
         opacity: 0;
         animation-fill-mode: forwards;
         a {
@@ -596,7 +594,7 @@ header {
 }
 
 .contact {
-    padding: 200px 0 50px;
+    padding: 200px 0 0;
     .desc {
         color: #fff;
         mix-blend-mode: difference;
@@ -691,6 +689,7 @@ header {
 }
 
 .footer .copyright {
+    display: block;
     color: #fff;
     padding: 40px 50px;
     font-weight: 300;
@@ -733,20 +732,102 @@ header {
         }
     }
 }
-
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1500px) {
+    header {
+        padding: 20px 5.2vw;
+    }
+    .intro {
+        .intro_text1, .intro_text2 {
+            font-size: 18px;
+            top: 140px;
+        }
+        .intro_count {
+            font-size: 50px;
+            top: 200px;
+            right: 130px;
+        }
+        .intro_scroll {
+            width: 40px;
+            height: 40px;
+            a::before {
+                top: 9px;
+                left: 12px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+        .mobile_qr {
+            top: 180px;
+            right: 130px;
+            a {
+                margin-bottom: 2px;
+                img {
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                }
+            } 
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+     header {
+        padding: 20px 5.2vw;
+    }
+    .intro {
+        .intro_text1, .intro_text2 {
+            font-size: 18px;
+            top: 140px;
+        }
+        .intro_count {
+            font-size: 50px;
+            top: 200px;
+            right: 130px;
+        }
+        .intro_scroll {
+            width: 40px;
+            height: 40px;
+            a::before {
+                top: 9px;
+                left: 12px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+        .mobile_qr {
+            top: 180px;
+            right: 130px;
+            a {
+                margin-bottom: 2px;
+                img {
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                }
+            } 
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    .design .work_wrap .box span {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+    .contact {
+        .desc {
+            font-size: 24px;
+        }
+    }
+    .footer .copyright {
+        font-size: 13px;
+        padding: 30px 50px;
+    }
+}
+@media screen and (max-width: 1279px) {
     header .pc_nav ul {
         column-gap: 40px;
-    }
-    .intro .intro_scroll {
-        width: 45px;
-        height: 45px;
-        a::before {
-            top: 11px;
-            left: 14px;
-            width: 13px;
-            height: 13px;
-        }
     }
     .project {
         padding: 100px 30px;
@@ -814,7 +895,7 @@ header {
         }
     }
     .contact .desc {
-        font-size: 26px;
+        font-size: 22px;
     }
 }
 
@@ -894,6 +975,7 @@ header {
         }
         .intro_count {
             font-size: 40px;
+            top: 300px;
         }
         .intro_scroll {
             width: 35px;
@@ -1028,6 +1110,9 @@ header {
                             height: 6vw;
                         }
                     }
+                    &.qr {
+                        border-left: none;
+                    }
                 }
             }
         }
@@ -1045,6 +1130,13 @@ header {
     }
 }
 @media screen and (max-width: 530px) {
+    .intro {
+        .intro_count {
+            font-size: 40px;
+            top: 270px;
+            right: 60px;
+        }
+    }
     .about {
         padding-left: 10vw;
         margin: 0;

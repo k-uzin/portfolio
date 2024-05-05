@@ -22,10 +22,18 @@ header {
   z-index: 9;
   transform: translateY(-100%);
   opacity: 0;
-  animation: movebottom 1s 3.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: movebottom 1s 3.5s;
+          animation: movebottom 1s 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+@-webkit-keyframes movebottom {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @keyframes movebottom {
   100% {
@@ -101,8 +109,16 @@ header .mobile_nav ul li {
   position: absolute;
   top: 0;
   left: 0;
-  animation: moveright 3s ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: moveright 3s ease-out;
+          animation: moveright 3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes moveright {
+  100% {
+    transform: translateX(100%);
+    display: none;
+  }
 }
 @keyframes moveright {
   100% {
@@ -122,8 +138,10 @@ header .mobile_nav ul li {
   overflow: hidden;
 }
 .intro .intro_text1 div {
-  animation: movehide 1s 3.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: movehide 1s 3.5s;
+          animation: movehide 1s 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .intro .intro_text1 div p {
   letter-spacing: 1px;
@@ -143,8 +161,10 @@ header .mobile_nav ul li {
 }
 .intro .intro_text2 div {
   transform: translateY(-100%);
-  animation: movebottom 1s 3.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: movebottom 1s 3.5s;
+          animation: movebottom 1s 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @keyframes movebottom {
   100% {
@@ -166,8 +186,15 @@ header .mobile_nav ul li {
   display: flex;
 }
 .intro .intro_count span {
-  animation: movehide 1s 3.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: movehide 1s 3.5s;
+          animation: movehide 1s 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes movehide {
+  100% {
+    transform: translateY(100%);
+  }
 }
 @keyframes movehide {
   100% {
@@ -192,8 +219,15 @@ header .mobile_nav ul li {
   font-weight: 600;
   display: block;
   transform: translateX(-100%);
-  animation: moveback 2s ease-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: moveback 2s ease-out;
+          animation: moveback 2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes moveback {
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes moveback {
   100% {
@@ -211,8 +245,10 @@ header .mobile_nav ul li {
   right: 0;
   left: 0;
   margin: 0 auto;
-  animation: down 1.5s 5s infinite, fadein 1s 5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: down 1.5s 5s infinite, fadein 1s 5s;
+          animation: down 1.5s 5s infinite, fadein 1s 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .intro .intro_scroll a {
   display: block;
@@ -230,6 +266,17 @@ header .mobile_nav ul li {
   border-bottom: 2px solid #333;
   transform: rotate(-45deg);
 }
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
 @keyframes down {
   0% {
     transform: translate(0);
@@ -241,6 +288,11 @@ header .mobile_nav ul li {
     transform: translate(0);
   }
 }
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 0.7;
+  }
+}
 @keyframes fadein {
   100% {
     opacity: 0.7;
@@ -248,14 +300,16 @@ header .mobile_nav ul li {
 }
 .intro .mobile_qr {
   position: absolute;
-  bottom: 560px;
-  right: 130px;
+  top: 280px;
+  right: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: opacity 1s 5s;
+  -webkit-animation: opacity 1s 3.5s;
+          animation: opacity 1s 3.5s;
   opacity: 0;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .intro .mobile_qr a {
   display: block;
@@ -269,6 +323,11 @@ header .mobile_nav ul li {
 }
 .intro .mobile_qr span {
   color: #333;
+}
+@-webkit-keyframes opacity {
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes opacity {
   100% {
@@ -578,7 +637,7 @@ header .mobile_nav ul li {
 }
 
 .contact {
-  padding: 200px 0 50px;
+  padding: 200px 0 0;
 }
 .contact .desc {
   color: #fff;
@@ -671,6 +730,7 @@ header .mobile_nav ul li {
 }
 
 .footer .copyright {
+  display: block;
   color: #fff;
   padding: 40px 50px;
   font-weight: 300;
@@ -710,20 +770,97 @@ header .mobile_nav ul li {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1500px) {
+  header {
+    padding: 20px 5.2vw;
+  }
+  .intro .intro_text1, .intro .intro_text2 {
+    font-size: 18px;
+    top: 140px;
+  }
+  .intro .intro_count {
+    font-size: 50px;
+    top: 200px;
+    right: 130px;
+  }
+  .intro .intro_scroll {
+    width: 40px;
+    height: 40px;
+  }
+  .intro .intro_scroll a::before {
+    top: 9px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+  }
+  .intro .mobile_qr {
+    top: 180px;
+    right: 130px;
+  }
+  .intro .mobile_qr a {
+    margin-bottom: 2px;
+  }
+  .intro .mobile_qr a img {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+  .intro .mobile_qr span {
+    font-size: 14px;
+  }
+  header {
+    padding: 20px 5.2vw;
+  }
+  .intro .intro_text1, .intro .intro_text2 {
+    font-size: 18px;
+    top: 140px;
+  }
+  .intro .intro_count {
+    font-size: 50px;
+    top: 200px;
+    right: 130px;
+  }
+  .intro .intro_scroll {
+    width: 40px;
+    height: 40px;
+  }
+  .intro .intro_scroll a::before {
+    top: 9px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+  }
+  .intro .mobile_qr {
+    top: 180px;
+    right: 130px;
+  }
+  .intro .mobile_qr a {
+    margin-bottom: 2px;
+  }
+  .intro .mobile_qr a img {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+  .intro .mobile_qr span {
+    font-size: 14px;
+  }
+  .design .work_wrap .box span {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+  .contact .desc {
+    font-size: 24px;
+  }
+  .footer .copyright {
+    font-size: 13px;
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 1279px) {
   header .pc_nav ul {
     -moz-column-gap: 40px;
          column-gap: 40px;
-  }
-  .intro .intro_scroll {
-    width: 45px;
-    height: 45px;
-  }
-  .intro .intro_scroll a::before {
-    top: 11px;
-    left: 14px;
-    width: 13px;
-    height: 13px;
   }
   .project {
     padding: 100px 30px;
@@ -794,7 +931,7 @@ header .mobile_nav ul li {
     border-left: 1px solid #929292;
   }
   .contact .desc {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -820,6 +957,7 @@ header .mobile_nav ul li {
     margin-bottom: 20px;
   }
   .about .right_box {
+    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -870,6 +1008,7 @@ header .mobile_nav ul li {
   }
   .intro .intro_count {
     font-size: 40px;
+    top: 300px;
   }
   .intro .intro_scroll {
     width: 35px;
@@ -886,6 +1025,7 @@ header .mobile_nav ul li {
     display: none;
   }
   .about {
+    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
@@ -963,20 +1103,20 @@ header .mobile_nav ul li {
     width: 100%;
   }
   .design .design_mobile .work_wrap .big,
-  .design .design_mobile .work_wrap .half,
-  .design .design_mobile .work_wrap .small {
+.design .design_mobile .work_wrap .half,
+.design .design_mobile .work_wrap .small {
     width: calc((100% - 10px) / 3);
     height: 29.78vw;
   }
   .design .design_mobile .work_wrap .big figure,
-  .design .design_mobile .work_wrap .half figure,
-  .design .design_mobile .work_wrap .small figure {
+.design .design_mobile .work_wrap .half figure,
+.design .design_mobile .work_wrap .small figure {
     width: 100%;
     height: 100%;
   }
   .design .design_mobile .work_wrap .big figure img,
-  .design .design_mobile .work_wrap .half figure img,
-  .design .design_mobile .work_wrap .small figure img {
+.design .design_mobile .work_wrap .half figure img,
+.design .design_mobile .work_wrap .small figure img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -990,6 +1130,7 @@ header .mobile_nav ul li {
     margin-bottom: 25vw;
   }
   .contact .contact_area {
+    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
@@ -1014,6 +1155,9 @@ header .mobile_nav ul li {
     width: 6vw;
     height: 6vw;
   }
+  .contact .contact_area .link_area .box.qr {
+    border-left: none;
+  }
   .footer .copyright {
     padding: 20px 20px;
   }
@@ -1027,6 +1171,11 @@ header .mobile_nav ul li {
   }
 }
 @media screen and (max-width: 530px) {
+  .intro .intro_count {
+    font-size: 40px;
+    top: 270px;
+    right: 60px;
+  }
   .about {
     padding-left: 10vw;
     margin: 0;
